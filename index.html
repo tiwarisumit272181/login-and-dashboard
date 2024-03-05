@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Login Page</title>
     <style>
         * {
             font-family: 'Roboto', sans-serif;
@@ -132,35 +132,7 @@
             <div id="notification-wrapper"></div>
         </div>
     </div>
-    <script>
-        function validateForm() {
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-
-            // Email validation
-            var emailRegex = /\S+@\S+\.\S+/;
-            if (!emailRegex.test(email)) {
-                alert("Please enter a valid email address.");
-                return false;
-            }
-
-            // Password validation
-            var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@]+$/;
-            if (!passwordRegex.test(password)) {
-                alert("Password must contain an uppercase letter, a number, and only '@' as a special character.");
-                return false;
-            }
-            if(emailRegex.test(email) && passwordRegex.test(password)){
-                window.location.href = "dashboard.html";
-            } else {
-                alert("Incorrect password.");
-            }
-        }
-
-        document.getElementById("forgotPassword").addEventListener("click", function() {
-            window.open("mailto:support@zentrades.pro");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
